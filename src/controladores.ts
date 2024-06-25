@@ -8,7 +8,7 @@ const pessoas = [
 export const itemProdutos = (req: Request, res:Response)=>{
 //FUNÇÃO DE BUSCA DE PRODUTOS POR PARÂMETRO DE REQUISIÇÃO 
     console.log(req.params.item); 
-    return res.send('Servidor está ok! Nodemon configurado com o TypeScript')
+    return res.send('Cheguei no controlador')
 }
 export const buscarUsuario = (req: Request,res: Response) => {
 //FUNÇÃO DE BUSCA DE USUÁRIOS CADASTRADOS NO ARRAY PESSOAS ATRAVÉZ DE PARÂMETRO DE REQUISIÇÃO
