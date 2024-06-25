@@ -12,8 +12,11 @@ const pessoas = [
     {nome: 'Mel',email: 'mel@email.com'},
     {nome: 'Emanuele',email: 'manu@email.com'},
 ]
-servidor.get('/usuarios/:email', (req, res)=>{
-    const {email} = req.params
+servidor.get('/usuarios', (req, res)=>{
+    const {email} = req.query
+    if (!email){
+        return res.send('parametro não informado!')
+    }
     const pessoa = pessoas.find((item)=>{
         return item.email === email
     })
